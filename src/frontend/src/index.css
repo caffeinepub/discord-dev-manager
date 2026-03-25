@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/fonts/BricolageGrotesque.woff2") format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/Satoshi.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+    /* Dark theme by default for this app */
+    --background: 0.09 0.015 245;
+    --foreground: 0.92 0.005 255;
+    --card: 0.14 0.025 240;
+    --card-foreground: 0.92 0.005 255;
+    --popover: 0.17 0.03 237;
+    --popover-foreground: 0.92 0.005 255;
+    --primary: 0.6 0.2 260;
+    --primary-foreground: 0.98 0 0;
+    --secondary: 0.17 0.03 237;
+    --secondary-foreground: 0.92 0.005 255;
+    --muted: 0.17 0.03 237;
+    --muted-foreground: 0.67 0.04 240;
+    --accent: 0.72 0.12 178;
+    --accent-foreground: 0.09 0.015 245;
+    --destructive: 0.52 0.22 25;
+    --destructive-foreground: 0.98 0 0;
+    --border: 0.22 0.035 238;
+    --input: 0.22 0.035 238;
+    --ring: 0.72 0.12 178;
+    --chart-1: 0.6 0.2 260;
+    --chart-2: 0.72 0.12 178;
+    --chart-3: 0.72 0.17 65;
+    --chart-4: 0.52 0.22 25;
+    --chart-5: 0.65 0.18 145;
+    --sidebar: 0.11 0.018 243;
+    --sidebar-foreground: 0.92 0.005 255;
+    --sidebar-primary: 0.72 0.12 178;
+    --sidebar-primary-foreground: 0.09 0.015 245;
+    --sidebar-accent: 0.17 0.03 237;
+    --sidebar-accent-foreground: 0.92 0.005 255;
+    --sidebar-border: 0.22 0.035 238;
+    --sidebar-ring: 0.72 0.12 178;
+    /* Custom nexus tokens */
+    --nexus-teal: oklch(0.72 0.12 178);
+    --nexus-blue: oklch(0.6 0.2 260);
+    --nexus-critical: oklch(0.52 0.22 25);
+    --nexus-high: oklch(0.58 0.21 25);
+    --nexus-medium: oklch(0.72 0.17 65);
+    --nexus-low: oklch(0.65 0.18 145);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+}
